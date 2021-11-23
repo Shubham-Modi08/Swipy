@@ -4,6 +4,9 @@
 =============================
 
 This is a app which is demo app for swiping up/down the music file and able to play and pause the music.
+- listen the song
+- play/pause the song
+- swipe up/down to navigate
 
 ## Building the Sample App
 
