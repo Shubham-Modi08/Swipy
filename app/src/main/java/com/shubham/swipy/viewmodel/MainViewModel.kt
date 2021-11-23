@@ -30,7 +30,7 @@ class MainViewModel : ViewModel() {
             }
 
             override fun onFailure(call: Call<Response>, t: Throwable) {
-                Log.e("VieModel", "Got error : " + t.localizedMessage)
+                Log.e("ViewModel", "Got error : " + t.localizedMessage)
             }
         })
     }

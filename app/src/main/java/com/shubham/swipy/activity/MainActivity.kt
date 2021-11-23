@@ -60,18 +60,19 @@ class MainActivity : AppCompatActivity(), AudioInterface {
     override fun onClickPlay(url: String, position: Int, play: ImageButton, pause: ImageButton) {
         mediaPlayer = MediaPlayer()
         mediaPlayer?.setDataSource(audioData.shorts[position].audioPath)
-        mediaPlayer?.prepare()
+        mediaPlayer?.prepareAsync()
+        mediaPlayer?.setOnPreparedListener {
+            it.start()
+        }
 
 
         length = audioData.shorts[position].curPos
         if (length > 0) {
             mediaPlayer!!.seekTo(length)
             mediaPlayer!!.start()
-        } else {
-            mediaPlayer?.setOnPreparedListener {
-                it.start()
-            }
         }
+
+
         mediaPlayer?.setOnCompletionListener {
             pause.visibility = View.GONE
             play.visibility = View.VISIBLE
