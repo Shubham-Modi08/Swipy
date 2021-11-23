@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Swipy</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="title">title</string>
+    <string name="date">2021-Nov-03</string>
+</resources>
